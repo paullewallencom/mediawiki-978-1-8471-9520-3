@@ -1,0 +1,27 @@
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+
+<a rel='lightbox' href='http://www.example.com'>Example.com</a>
+
+<li id="ca-<?php echo Sanitizer::escapeId($key) ?>" <?php
+if($tab['class']) 
+	{ 
+?> class="<?php echo htmlspecialchars($tab['class']) ?>" <?php 
+}
+?>
+><a href="<?php echo htmlspecialchars($tab['href']) ?>" 
+<?php 
+	if( $key == 'edit' )
+{
+?>  rel="lightbox" <?php
+}
+?><?php echo $skin->tooltipAndAccesskey('ca-'.$key) ?>><?php
+echo htmlspecialchars($tab['text']) ?></a></li>
+<?php			 } ?>
+
+
+<a href='image1.gif' rel='lightbox[group1]'>Item 1</a>
+<a href='image2.gif' rel='lightbox[group1]'>Item 2</a>
+
+<script type="text/javascript" src="skins/tc/tablecloth.js"></script>

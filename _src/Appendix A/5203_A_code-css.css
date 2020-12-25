@@ -1,0 +1,27 @@
+/* appendix: IE cond.coms. */
+#use-opera, 
+#upgrade-browser {
+background: #E6E4D8;
+border-bottom: 2px #8C1425 solid;
+color: #38230C;
+font-size: 90%;
+padding: 10px;
+}
+#use-opera a,
+#upgrade-browser a {
+color: #8C1425;
+}
+
+/* appendix: test list */
+ul#test {
+list-style-type: none;
+}
+#test li {
+display: inline;
+}
+#test li a {
+background: #8C1425;
+color: #FFF
+padding: 10px;
+position: relative;
+}

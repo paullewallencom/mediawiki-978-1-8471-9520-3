@@ -1,0 +1,26 @@
+#twitter_div {
+background: #FFF;
+border: 3px #BEB798 solid;
+color: #BEB798;
+margin: 0;
+padding: 5px;
+width: 165px;
+}
+	#twitter_div a {
+	color: #8D1425 !important;
+	}
+ul#twitter_update_list {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+#twitter_update_list li {
+color: #38230C;
+display: block;
+}
+h2.twitter-title {
+color: #BEB798;
+font-size: 100%;
+}
+
+

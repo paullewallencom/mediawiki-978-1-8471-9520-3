@@ -1,0 +1,100 @@
+#p-Jazz_Festivals_in {
+background: #8C1425 url("p-jazz_festivals_in_bg.png") no-repeat top left;
+color: #FFFFFF;
+font-size: 70%;
+padding: 5px;
+}
+	#p-Jazz_Festivals_in h5 {
+	color: #FFFFFF;
+	display: inline;	
+	font-weight: normal;
+	}
+
+	
+#p-Jazz_Festivals_in a {
+border-color: #FFFFFF;
+color: #FFFFFF;	
+}
+#p-Jazz_Festivals_in a:hover {
+border-bottom-width: 0;	
+}
+#p-Jazz_Festivals_in ul {
+display: inline;
+list-style-type: none;	
+margin: 0;
+}
+#p-Jazz_Festivals_in li {
+display: inline;
+margin: 0 5px 0 0;
+}
+
+
+
+#globalWrapper {
+margin: 0 auto; /* centre the layout */
+width: 950px;
+}
+#content {
+float: left;
+width: 710px;
+}
+#column-one {
+float: left;
+width: 215px;
+}
+
+
+
+#header {
+background: #FFFFFF url("header_bg.png") no-repeat top right;
+height: 85px;	
+}
+	#header img {
+	float: left;	
+	}
+
+	
+#globalWrapper {
+background: #D9D5C3;
+margin: 0 auto;
+padding: 0;
+width: 950px;
+}
+
+#content {
+background: #E6E4D8 url("content_bg.gif") repeat-y top left;
+color: #000000;
+float: left;
+font-family: georgia, "times new roman", times, serif;
+padding: 0px 5px 10px 35px;
+width: 710px;
+}
+
+
+#column-one img {
+border: 2px #BEB798 solid;
+margin: 7px;	
+}
+
+
+h5.sponsors, h5.advertisements {
+height: 21px;
+border-bottom: 1px #BEB798 solid;
+border-top: 1px #BEB798 solid;
+width: 195px;
+}
+h5.sponsors {
+background: transparent url("h5_sponsor.png") no-repeat top left;	
+}
+h5.advertisements {
+background: transparent url("h5_advertisement.png") no-repeat top left;	
+}
+h5.sponsors span, h5.advertisements span {
+display: none !important;
+}
+
+
+
+
+
+

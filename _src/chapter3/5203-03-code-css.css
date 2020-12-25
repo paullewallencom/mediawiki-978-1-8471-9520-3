@@ -1,0 +1,152 @@
+/** Chapter 3 **/
+
+.portlet {
+font-family: georgia, "times new roman", times, serif;
+}
+
+#p-logo {
+height: 135px;
+width: 135px;	
+}
+
+#p-navigation h5, #p-search h5, #p-tb h5, #p-personal h5, #p-cactions h5 {
+display: none !important;
+}
+
+#p-personal {
+background: #8D1425 url("p-personal_bg.png") no-repeat top right;
+color: #FFFFFF;
+float: right;
+font-size: 80%;
+height: 65px;
+padding: 10px;
+width: 170px;
+}
+#p-personal ul {
+list-style-type: none;	
+margin: 0;
+padding: 0;
+font-size: 75%;
+text-align: right;
+}
+	#p-personal li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	}
+#pt-mytalk, #pt-mycontris, #pt-logout, #pt-anonlogin {
+display: block !important;
+}
+#pt-anonlogin, #pt-anontalk {
+
+}
+#pt-anonlogin, #pt-login {
+font-size: 175%;
+font-weight: bold;
+}
+#p-personal a, #p-personal a:active, #p-personal a:link, #p-personal a:visited, #p-personal a.new, #p-personal a.active {
+color: #FFFFFF !important;
+margin: 0;
+padding: 0;
+}
+#p-personal a:hover {
+text-decoration: none;	
+}
+
+
+#p-cactions {}
+#p-cactions ul {
+float: right;
+list-style-type: none;
+}
+#p-cactions li {
+display: inline;
+margin: 0 !important;
+padding: 0 !important;	
+position: relative;
+}
+#p-cactions li a {
+margin: 0 -5px 0 0 !important;
+}
+#p-cactions a {
+background: #FFFFFF;
+border: 1px #8D1425 solid;	
+color: #8D1425;
+padding: 3px;
+text-decoration: none;
+}
+#p-cactions a:hover {
+background: #8D1425;
+color: #FFFFFF;	
+}
+#p-cactions li.selected a {
+background: #8C1425 !important;
+color: #FFFFFF !important;
+}
+
+
+#ca-talk, #ca-watch, #ca-addsection {
+display: none !important;
+}
+
+#p-tb {
+font-size: 70%;	
+}
+#p-tb h5 {
+display: none;
+}
+#p-tb ul {
+list-style-type: none;	
+}
+#p-tb li {
+display: inline;	
+}
+#p-tb, #p-tb a {
+color: #857F61;	
+}
+#p-tb a:hover {
+text-decoration: none;	
+}
+#t-whatlinkshere, #t-permalink, #t-recentchangeslinked {
+display: none !important;	
+}
+
+#footer {
+background: #D9D5C3;
+border-color: #BEB798;
+border-style: solid;	
+border-width: 1px 1px 0 30px;
+color: #38230C;
+clear: both;
+font-size: 75%;
+line-height: 160%;
+padding: 10px 0;
+}
+#footer ul {
+list-style-type: none;
+margin: 0;
+}
+#footer li {
+display: block;	
+}
+#footer a, #footer a:active, #footer a:link, #footer a:visited {
+color: #38230C;
+}
+#footer a:hover {
+text-decoration: none;	
+}
+	
+#searchGoButton, #mw-searchButton {
+display: none;	
+}
+
+#searchInput {
+background: #FFFFFF url("searchInput_bg.png") no-repeat center right;
+border: 1px #8D1425 solid;	
+font-size: 80%;
+padding: 3px 30px 3px 3px;
+}
+
+#p-navigation {
+display: none;	
+}

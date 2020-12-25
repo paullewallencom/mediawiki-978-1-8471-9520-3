@@ -1,0 +1,198 @@
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/richard.carter/book/v1/opensearch_desc.php" title="JazzMeet (English)" />
+
+<a href="http://www.digg.com/submit?url=http://www.jazzmeet.com&amp;title= <?php $this->text('pagetitle') ?>" title="Add this page to Digg!">
+Add this page to Digg!
+</a>
+
+<body class="mediawiki ns-0 ltr page-Main_Page">
+
+<?php if($this->data['body_ondblclick']) { ?>ondblclick="<?php $this->text('body_ondblclick') ?>"<?php } ?>
+
+<?php if($this->data['body_onload'    ]) { ?>onload="<?php     $this->text('body_onload')     ?>"<?php } ?>
+
+<?php $this->text('nsclass') ?> <?php $this->text('dir') ?> <?php $this->text('pageclass') ?>
+
+<?php if($this->data['sitenotice']) { ?>
+<div id="siteNotice">
+<?php $this->html('sitenotice') ?>
+</div><?php } ?>
+
+<h1 class="firstHeading">
+<?php $this->data['displaytitle']!=""?$this->html('title'):$this->text('title') ?>
+</h1>
+
+<h3 id="siteSub">
+<?php $this->msg('tagline') ?>
+</h3>
+
+<div id="contentSub">
+<?php $this->html('subtitle') ?>
+</div>
+
+<?php if($this->data['undelete']) { ?>
+<div id="contentSub2">
+<?php     $this->html('undelete') ?>
+</div>
+<?php } ?>
+
+
+<?php if($this->data['newtalk'] ) { ?>
+<div class="usermessage">
+<?php $this->html('newtalk')  ?>
+</div>
+<?php } ?>
+
+
+<?php if($this->data['showjumplinks']) { ?>
+<div id="jump-to-nav">
+<?php $this->msg('jumpto') ?> 
+<a href="#column-one">
+<?php $this->msg('jumptonavigation') ?>
+</a>, 
+<a href="#searchInput">
+<?php $this->msg('jumptosearch') ?>
+</a>
+</div>
+<?php } ?>
+
+
+<?php if($this->data['catlinks']) { ?>
+<div id="catlinks">
+<?php       $this->html('catlinks') ?>
+</div>
+<?php } ?>
+
+<h5>
+<?php $this->msg('views') ?>
+</h5>
+
+<ul>
+<?php	foreach($this->data['content_actions'] as $key => $tab) { ?>
+<li id="ca-<?php echo Sanitizer::escapeId($key) ?>"
+<?php if($tab['class']) { ?> class="<?php echo htmlspecialchars($tab['class']) ?>"<?php } ?>>
+<a href="<?php echo htmlspecialchars($tab['href']) ?>"<?php echo $skin->tooltipAndAccesskey('ca-'.$key) ?>><?php
+echo htmlspecialchars($tab['text']) ?>
+</a>
+</li>
+<?php } ?>
+</ul>
+
+
+<h5>
+<?php $this->msg('personaltools') ?>
+</h5>
+
+<ul>
+<?php foreach($this->data['personal_urls'] as $key => $item) { ?>
+<li id="pt-<?php echo Sanitizer::escapeId($key) ?>"<?php
+if ($item['active']) { ?> class="active"<?php } ?>>
+<a href="<?php echo htmlspecialchars($item['href']) ?>"<?php echo $skin->tooltipAndAccesskey('pt-'.$key) ?>
+<?php if(!empty($item['class'])) { ?> 
+class="<?php echo htmlspecialchars($item['class']) ?>"<?php } ?>>
+<?php echo htmlspecialchars($item['text']) ?>
+</a>
+</li>
+<?php	} ?>
+</ul>
+
+
+<h5>
+<?php $this->msg('search') ?>
+</h5>
+
+
+<form action="<?php $this->text('searchaction') ?>" id="searchform">
+<input id="searchInput" name="search" type="text"<?php echo $skin->tooltipAndAccesskey('search');
+if( isset( $this->data['search'] ) ) {?> value="<?php $this->text('search') ?>"<?php } ?> />
+<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="<?php $this->msg('searcharticle') ?>" />
+<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="<?php $this->msg('searchbutton') ?>" />
+</form>
+
+
+<h5>
+<?php $this->msg('toolbox') ?>
+</h5>
+
+<ul>
+<li id="t-whatlinkshere"><a href=" Special:Whatlinkshere/Test" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+<li id="t-upload"><a href="Special:Upload" title="Upload images or media files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="Special:Specialpages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+</ul>
+
+
+<?php if($this->data['notspecialpage']) { ?>
+/* 
+code to be inserted if the page is not 'special' goes here
+*/
+} ?>
+
+
+<?php if($this->data['notspecialpage']) { ?>
+/* 
+code to be inserted if the page is not 'special' goes here
+*/
+} ?>
+
+<?php if( $this->data['nav_urls']['recentchangeslinked'] ) { ?>
+<li id="t-recentchangeslinked">
+<a href="<?php echo htmlspecialchars($this->data['nav_urls']['recentchangeslinked']['href'])?>"
+<?php echo $skin->tooltipAndAccesskey('t-recentchangeslinked') ?>>
+<?php $this->msg('recentchangeslinked') ?>
+</a></li>
+
+
+if(!empty($this->data['nav_urls']['print']['href'])) { ?>
+<li id="t-print">
+<a href="<?php echo htmlspecialchars($this->data['nav_urls']['print']['href'])?>"
+<?php echo $skin->tooltipAndAccesskey('t-print') ?>>
+<?php $this->msg('printableversion') ?>
+</a></li>
+<?php	}
+
+
+<ul id="f-list">
+<?php
+$footerlinks = array(
+	'about', 'disclaimer',
+);
+foreach( $footerlinks as $aLink ) {
+if( isset( $this->data[$aLink] ) && $this->data[$aLink] ) {
+?>				
+<li id="<?php echo$aLink?>"><?php $this->html($aLink) ?></li>
+<?php }
+}
+?>
+</ul>
+
+
+<?php if ( $this->data['debug'] ): ?>
+<!-- Debug output:
+<?php $this->text( 'debug' ); ?>
+-->
+<?php endif; ?>
+</body>
+</html>
+
+<?php
+wfRestoreWarnings();}
+}
+?>
+
+
+<?php echo 
+$GLOBALS['name_of_global_variable']; 
+?>
+
+
+<p>
+Page found here: www.example.com/
+<?php echo $GLOBALS['wgScript']; ?>
+/
+<?php echo $GLOBALS['wgTitle']; ?>
+</p>
+
+
+<p>
+Page found here: www.example.com/wiki/index.php/JazzMeet 
+</p>

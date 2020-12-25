@@ -1,0 +1,27 @@
+/* Ch 10 CSS - print */
+
+/* .noprint */
+
+.f-poweredby, .f-top {
+display: none;	
+}
+#footer {
+display: none !important;
+}
+
+/* Footer */
+.printfooter {
+display: block;
+visibility: visible;
+}
+
+/* !important added. Overwrites above */
+#toc { 
+border:1px solid #aaaaaa !important;
+background-color:#f9f9f9 !important;
+color: #000000 !important;
+padding:5px;
+}
+#toc h2 {
+color: #000000 !important;	
+}

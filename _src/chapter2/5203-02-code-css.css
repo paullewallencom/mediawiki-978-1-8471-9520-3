@@ -1,0 +1,333 @@
+/*
+ *  JazzMeet skin, v1.0 ('Everything Happens To Me'/jazzmeet)
+ */
+
+#content {
+background: #E6E4D8 url("content_bg.gif") repeat-y top left;
+color: #000000;
+font-family: georgia, "times new roman", times, serif;
+padding: 10px 5px 10px 35px;
+width: auto;
+}
+#content p, #content ul, #content ol {
+font-size: 100%;
+line-height: 175%;
+}
+#content strong, #content b {
+color: #8C1425 !important;	
+}
+#content a, #content a:active, #content a:link {
+color: #8C1425;
+font-weight: bold;
+}
+#content a:visited {
+color: #857F61;
+}
+a.text {
+border-color: #8C1425;
+color: #8C1425;	
+}
+#content a:hover, a:hover.text {
+color: #38230C !important;
+text-decoration: none !important;
+}
+
+a.new, #p-personal a.new {
+background: transparent url("a.new.gif") no-repeat top left;
+text-decoration: underline;
+padding-left: 20px;
+}
+a.new:visited, #p-personal a.new:visited {
+color: #8C1425 !important;
+}
+.text, .external {
+color: #38230C;
+}
+
+h1, .firstHeading {
+background: transparent url("firstHeading.gif") center left no-repeat;
+border-width: 0;
+color: #8D1425;
+font-size: 2.2em !important;
+font-weight: bold;
+margin-bottom: .1em;
+margin-left: -35px;
+padding-left: 35px;
+}
+#content h2, #content h3, #content h4, #content h5, #content h6 {
+border-width: 0;
+}
+h3 .mw-headline, h4 .mw-headline, h5 .mw-headline, h6 .mw-headline {
+color: #857F61;
+}
+h2 .mw-headline {
+color: #38230C;
+font-size: 120% !important;
+font-weight: bold;
+}
+h3 .mw-headline {
+font-size: 120% !important;
+}
+h4 .mw-headline {
+font-size: 115% !important;
+}
+h5 .mw-headline, h6 .mw-headline {
+font-size: 110% !important;
+}
+h6 .mw-headline {
+text-transform: uppercase;
+}
+#siteSub, #jump-to-nav, .printfooter {
+display: none;
+}
+
+.editsection {
+color: #BEB798 !important;
+}
+.editsection a, .editsection a:active, .editsection a:link, .editsection a:visited {
+color: #BEB798 !important;
+text-transform: uppercase;
+}
+
+#toc, .toc {
+border: 1px solid #BEB798 !important;
+background: #D9D5C3 !important;
+font-size: 75% !important;
+margin: 0 10px 10px 0 !important; 
+padding: 5px !important;
+}
+#toc h2, .toc h2 {
+border-width: 0;
+color: #8D1425;
+display: inline;
+padding: 0;
+font-size: 110%;
+font-weight: bold;
+} 
+.toc td, .toc th, #toc td, #toc th { /* prevents inheritance of default #content table styling */
+border-width: 0 !important;
+}
+#toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle {
+text-align: left;
+}
+#toc ul, .toc ul {
+list-style-type: none;
+list-style-image: none;
+margin: 0;
+padding: 0;
+text-align: left;
+}
+#toc ul ul, .toc ul ul {
+margin: 0 0 0 5px;
+}
+#toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle {
+text-align: left;
+}
+#toc .toctoggle, .toc .toctoggle {
+display: inline;
+font-size: 90% !important;
+float: right;
+text-transform: uppercase;
+}
+#toc a, #toc a:active, #toc a:link, #toc a:visited {
+color: #8D1425;
+}
+
+#catlinks {
+border: 1px solid #BEB798;
+background: #D9D5C3;
+font-size: 85% !important;
+padding: 5px;
+margin: 10px 5px;
+clear: both;
+}
+
+.tright {
+clear: right;
+float: right;
+margin: 5px 0 5px 10px;	
+}
+.tleft {
+clear: left;
+float: left;
+margin: 5px 10px 5px 0;	
+}
+.image img {
+border: 5px #BEB798 solid;
+margin: 10px;
+max-width: 500px;
+}
+.thumb {
+background: #D9D5C3;
+border: 1px #BEB798 solid;
+padding: 5px;
+width: auto;	
+}
+.thumb .image img {
+border: 1px #BEB798 solid;
+width: 140px;
+}
+.thumbcaption {
+font-size: 80% !important;
+font-style: italic;
+padding: 0 5px !important;
+}
+
+.magnify {
+float: left;
+width: auto;
+}
+.magnify img {
+float: left;
+width: auto;
+}
+.magnify img, .magnify img a {
+border-width: 0 !important;	
+}
+
+#content table {
+background: transparent;
+border-width: 0;	
+}
+#content th, #content td {
+padding: 5px;	
+}
+#content th {
+background: #BEB798;
+border-width: 0;
+color: #FFFFFF;
+font-weight: bold;
+}
+#content td {
+border: 1px #BEB798 solid;
+}
+#content caption {
+display: none;	
+}
+
+.usermessage {
+background: #D9D5C3 url("usermessage.gif") top left no-repeat;
+border: 2px #8D1425 solid;
+color: black;
+font-weight: bold;
+margin: 2em 0 1em;
+padding: 15px 5px 15px 60px;
+vertical-align: middle;
+}
+.redirectText {
+font-size: 175%;
+}
+
+ul#filetoc {
+border: 1px solid #aaaaaa;
+background: #D9D5C3;
+border: 1px #BEB798 solid;
+font-size: 90%;
+margin: 10px;
+padding: 5px;
+}
+#filetoc li {
+display: inline;
+list-style-type: none;
+margin: 5px;
+}
+h2#filelinks {
+color: #857F61;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+.noarticletext {
+font-size: 150%;	
+}
+
+#content form {
+background: #D9D5C3;
+border: 1px solid #BEB798;
+margin: 3px 0;
+padding: 10px 5px;	
+}
+#wpTextbox1, #wpSummary, #wpMinoredit, #wpWatchthis, 
+#wpName1, #wpPassword1, {
+background: #E6E4D8;
+border: 1px solid #BEB798;
+margin: 5px 0;
+}
+	#wpRemember {
+	/* Check box for remembering log in details */
+	}
+#wpTextbox1 {
+font-family: georgia, "times new roman", times, sans-serif;
+font-size: 100%;
+}
+.editbuttons {
+margin: 10px 0;	
+}
+#wpSave, #wpDiff {
+font-weight: normal;
+}
+#wpSave, #wpDiff, 
+#wpLoginattempt, #wpMailmypassword  {
+background: #E6E4D8;
+border: 2px solid #BEB798;
+color: #38230C;
+padding: 3px 5px;
+}
+#wpPreview {
+background: #8D1425;
+border: 2px #FFFFFF solid;
+color: #FFFFFF;
+font-weight: bold;
+padding: 3px 5px;	
+}
+.editHelp {
+display: block;
+font-size: 75%;
+margin: 5px 0;	
+}
+
+#editpage-copywarn {
+color: #202020 !important;
+font-size: 75% !important;	
+}
+
+#wikiPreview {
+border: 2px #8D1425 solid !important;
+padding: 0;
+}
+.previewnote {
+color: #8D1425;
+font-size: 150%;
+}
+
+/* Show changes */
+.diff-otitle, .diff-ntitle {
+background: #BEB798 !important;
+color: #FFFFFF;
+font-weight: bold;
+}
+td.diff-lineno {
+color: #BEB798;
+}
+.diff-context, .diff-marker {
+background: #D9D5C3 !important;
+}
+.diff-addedline, .diff-deletedline {
+color: #FFFFFF !important;	
+}
+.diff-deletedline {
+background: #8C1425 !important;
+}
+.diff-addedline {
+background: #38230C !important;
+}
+.diffchange {
+color: #BEB798 !important;
+}
+
+#userloginForm {
+	
+}
+#userloginForm table, #userloginForm th, #userloginForm td, #userlogin2 table, #userlogin2 td, #userlogin2 th {
+border-width: 0 !important;
+}

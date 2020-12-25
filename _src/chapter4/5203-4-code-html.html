@@ -1,0 +1,241 @@
+<title>
+<?php $this->data['displaytitle']!=""?$this->html('title'):$this->text('title') ?> &bull; JazzMeet
+</title>
+
+
+<style type="text/css" media="screen, projection">/*<![CDATA[*/
+	@import "<?php $this->text('stylepath') ?>/common/shared.css?<?php echo $GLOBALS['wgStyleVersion'] ?>";
+	@import "<?php $this->text('stylepath') ?>/<?php $this->text('stylename') ?>/main.css?<?php echo $GLOBALS['wgStyleVersion'] ?>";
+		/*]]>*/</style>
+
+		
+		
+<style type="text/css" media="screen, projection">
+<!--@import "skins/jazzmeet/main.css"-->
+</style>
+
+
+<link rel="stylesheet" type="text/css" <?php if(empty($this->data['printable']) ) { ?>media="print"<?php } ?> href="<?php $this->text('stylepath') ?>/common/commonPrint.css?<?php echo $GLOBALS['wgStyleVersion'] ?>" />
+
+
+
+<meta http-equiv="Content-Type" 
+content="<?php $this->text('mimetype') ?>; charset=<?php $this->text('charset') ?>" />
+
+
+<?php	}
+if($this->data['usercss'   ]) { ?>
+<style type="text/css">
+<?php $this->html('usercss'   ) ?>
+</style>
+
+
+<?php	if($this->data['pagecss'   ]) { ?>
+<style type="text/css">
+<?php $this->html('pagecss'   ) ?>
+</style>
+
+
+<?php	if($this->data['jsvarurl'  ]) { ?>
+<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('jsvarurl'  ) ?>">
+<!-- site js -->
+</script>
+
+
+<!-- start content -->
+<?php $this->html('bodytext') ?>
+	<?php if($this->data['catlinks']) { ?><div id="catlinks"><?php       $this->html('catlinks') ?></div><?php } ?>
+<p id="f-top">
+	<a href="#top" title="Return to the top of this page">Top of this page</a>
+</p>
+<!-- end content -->
+<div class="visualClear"></div>
+</div>
+
+
+<h1 class="firstHeading">
+<?php $this->data['displaytitle']!=""?$this->html('title'):$this->text('title') ?>
+</h1>
+
+
+<h3 id="siteSub">
+<?php $this->msg('tagline') ?>
+</h3>
+
+
+<h3 id="siteSub">Courtesy of JazzMeet</h3>
+
+
+<div id="contentSub"><?php $this->html('subtitle') ?></div>
+<?php if($this->data['undelete']) { ?><div id="contentSub2"><?php     $this->html('undelete') ?></div><?php } ?>
+
+<?php if($this->data['newtalk'] ) { ?><div class="usermessage"><?php $this->html('newtalk')  ?></div><?php }
+
+<?php if($this->data['showjumplinks']) { ?><div id="jump-to-nav"><?php $this->msg('jumpto') ?> <a href="#column-one"><?php $this->msg('jumptonavigation') ?></a>, <a href="#searchInput"><?php $this->msg('jumptosearch') ?></a></div><?php } ?>
+
+<?php if($this->data['catlinks']) { ?>
+<div id="catlinks"><?php       $this->html('catlinks') ?></div><?php } ?>
+
+
+<h5>Jazz Festivals in</h5>
+<div class='pBody'>
+<ul>
+	<li id="n-Category:JazzMeetUK"><a href="index.php/Category:JazzMeetUK">Category:JazzMeetUK</a></li>
+	<li id="n-Category:JazzMeetEurope"><a href="index.php/Category:JazzMeetEurope">Category:JazzMeetEurope</a></li>
+	<li id="n-Category:JazzMeetAmerica"><a href="index.php/Category:JazzMeetAmerica">Category:JazzMeetAmerica</a></li>
+	<li id="n-Category:JazzMeetAsia"><a href="index.php/Category:JazzMeetAsia">Category:JazzMeetAsia</a></li>
+	<li id="n-Category:JazzMeetAfrica"><a href="index.php/Category:JazzMeetAfrica">Category:JazzMeetAfrica</a></li>
+</ul>
+</div>
+
+
+<h5><?php $out = wfMsg( $bar ); if (wfNoMsg($bar, $out)) echo $bar; else echo $out; ?></h5>
+<div class='pBody'>
+<ul>
+<?php foreach($cont as $key => $val) { ?>
+<li id="<?php echo htmlspecialchars($val['id']) ?>">
+<a href="<?php echo htmlspecialchars($val['href']) ?>">
+<?php echo htmlspecialchars($val['text'])?></a></li>
+<?php } ?>
+</ul>
+</div>
+
+
+<div id="globalWrapper">
+
+<div id="content">
+<!-- main content here -->
+</div>
+
+<div id="column-one">
+<!-- column content here -->
+</div>
+
+<div style="clear: both !important;"></div>
+</div>
+
+
+<div id="header">
+
+<div class="portlet" id="p-personal">
+<h5><?php $this->msg('personaltools') ?></h5>
+<div class="pBody">
+<ul>
+<?php foreach($this->data['personal_urls'] as $key => $item) { ?>
+	<li id="pt-<?php echo Sanitizer::escapeId($key) ?>"<?php
+if ($item['active']) { ?> class="active"<?php } ?>><a href="<?php
+				echo htmlspecialchars($item['href']) ?>"<?php echo $skin->tooltipAndAccesskey('pt-'.$key) ?><?php
+if(!empty($item['class'])) { ?> class="<?php
+	echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php
+	echo htmlspecialchars($item['text']) ?></a></li>
+<?php			} ?>
+</ul>
+</div>
+</div>
+
+<img src="jazzmeet_logo.png" alt="JazzMeet logo" />
+
+</div><!--end header-->
+
+
+<div class="portlet" id="p-logo">
+<a style="background-image: url(skins/common/images/wiki.png);" href="index.php/Main_Page" title="Visit the Main Page [z]" accesskey="z"></a>
+</div>
+<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+
+
+
+<div id="column-one">
+
+<div id="p-search" class="portlet">
+<h5><label for="searchInput"><?php $this->msg('search') ?></label></h5>
+<div id="searchBody" class="pBody">
+<form action="<?php $this->text('searchaction') ?>" id="searchform"><div>
+<input id="searchInput" name="search" type="text"<?php echo $skin->tooltipAndAccesskey('search');
+if( isset( $this->data['search'] ) ) {
+	?> value="<?php $this->text('search') ?>"<?php } ?> />
+<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="<?php $this->msg('searcharticle') ?>" />&nbsp;
+<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="<?php $this->msg('searchbutton') ?>" />
+</div>
+</form>
+</div>
+</div>
+
+</div><!-- end column-one-->
+
+
+
+<h5 class="sponsors"><span>Sponsors</span></h5>
+<img src="wiki-install-path/sponsor_packt.png" alt="Sponsor: Packt" />
+<img src="wiki-install-path/sponsor_peacock-carter.png" alt="Sponsor: Peacock Carter" />
+
+<h5 class="advertisements"><span>Advertisements</span></h5>
+
+</div><!-- end column-one-->
+
+
+
+<div id="column-content">
+
+<div class='portlet' id='p-<?php echo Sanitizer::escapeId($bar) ?>'<?php echo $skin->tooltip('p-'.$bar) ?>>
+<h5>
+<?php $out = wfMsg( $bar ); if (wfEmptyMsg($bar, $out)) echo $bar; else echo $out; ?>
+</h5>
+<div class='pBody'>
+<ul>
+<?php foreach($cont as $key => $val) { ?>
+<li id="<?php echo Sanitizer::escapeId($val['id']) ?>"<?php
+if ( $val['active'] ) { ?> class="active" <?php }?>>
+<a href="<?php echo htmlspecialchars($val['href']) ?>"<?php echo $skin->tooltipAndAccesskey($val['id']) ?>><?php echo htmlspecialchars($val['text']) ?></a></li>
+<?php	} ?>
+</ul>
+</div>
+</div>
+<?php } ?>
+
+<div id="content">
+
+
+
+
+
+
+
+
+</div><!-- end content-->
+
+<div id="footer">
+<ul id="f-list">
+<?php
+		$footerlinks = array(
+			'about', 'disclaimer',
+		);
+		foreach( $footerlinks as $aLink ) {
+			if( isset( $this->data[$aLink] ) && $this->data[$aLink] ) {
+?>				<li id="<?php echo$aLink?>"><?php $this->html($aLink) ?></li>
+<?php 		}
+		}
+?>
+<li id="f-poweredby">Powered by <a href="http://www.mediawiki.org/" title="MediaWiki">MediaWiki</a> from the cool dudes at <a href="http://www.wikimedia.org/" title="Wikimedia">Wikimedia</a></li>
+<li id="f-top"><a href="#top" title="Return to the top of this page">Top of this page</a></li>
+</ul>
+</div>
+
+
+
+
+
+<?php $this->html('bottomscripts'); /* JS call to runBodyOnloadHook */ ?>
+</div>
+<?php $this->html('reporttime') ?>
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</body>
+</html>
+<?php
+	wfRestoreWarnings();
+	} // end of execute() method
+} // end of class
+?>
+
+
+
